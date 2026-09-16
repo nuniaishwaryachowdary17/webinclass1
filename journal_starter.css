@@ -1,0 +1,817 @@
+/*
+==========================================================
+SPECIAL FEATURES
+==========================================================
+
+#1 Custom Color Theme & Typography
+#2 Hover Effects & Transitions
+#3 Extra Responsive Breakpoint
+#5 Dark Mode Toggle
+
+==========================================================
+*/
+
+
+/* ========================================================
+   SPECIAL FEATURE #1
+   CUSTOM COLORS + GOOGLE FONT
+   ======================================================== */
+
+:root {
+
+    --page-background: #f5f5f5;
+
+    --main-background: #ffffff;
+
+    --header-background: #b9e7f2;
+
+    --header-border: #e74c3c;
+
+    --sidebar-background: #d9e1e5;
+
+    --entry-background: #dff6fb;
+
+    --border-color: #49a9b5;
+
+    --heading-color: #168b99;
+
+    --text-color: #333333;
+
+    --muted-color: #777777;
+
+    --link-color: #176b75;
+
+    --solution-color: #4caf50;
+
+    --footer-color: #4caf50;
+}
+
+
+/* ========================================================
+   STEP 1
+   BOX MODEL RESET
+   ======================================================== */
+
+* {
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+}
+
+
+/* ========================================================
+   BODY
+   ======================================================== */
+
+body {
+
+    font-family: "Roboto", Arial, sans-serif;
+
+    background-color: var(--page-background);
+
+    color: var(--text-color);
+
+    line-height: 1.6;
+
+    transition:
+        background-color 0.4s ease,
+        color 0.4s ease;
+}
+
+
+/* ========================================================
+   MAIN CONTAINER
+   ======================================================== */
+
+#main-container {
+
+    width: 960px;
+
+    max-width: 100%;
+
+    margin: 20px auto;
+
+    background-color: var(--main-background);
+
+    border: 3px solid #4caf50;
+
+    transition:
+        background-color 0.4s ease,
+        border-color 0.4s ease;
+}
+
+
+/* ========================================================
+   STEP 2
+   HEADER
+   ======================================================== */
+
+#header-box {
+
+    position: relative;
+
+    background-color: var(--header-background);
+
+    color: #173f46;
+
+    padding: 20px;
+
+    text-align: center;
+
+    border-bottom: 3px solid var(--header-border);
+
+    transition:
+        background-color 0.4s ease,
+        color 0.4s ease;
+}
+
+
+/* Header top section */
+
+.header-top {
+
+    position: relative;
+
+    min-height: 55px;
+
+    padding-right: 155px;
+}
+
+
+/* Header title */
+
+#header-box h1 {
+
+    font-size: 2em;
+
+    color: #173f46;
+
+    margin-bottom: 5px;
+
+    transition: color 0.3s ease;
+}
+
+
+/* Subtitle */
+
+#header-box > p {
+
+    font-style: italic;
+
+    color: #456b72;
+
+    margin-top: 5px;
+}
+
+
+/* ========================================================
+   SOLUTION BADGE
+   ======================================================== */
+
+.solution-badge {
+
+    display: inline-block;
+
+    background-color: var(--solution-color);
+
+    color: white;
+
+    font-size: 0.45em;
+
+    font-weight: 700;
+
+    padding: 5px 9px;
+
+    border-radius: 6px;
+
+    vertical-align: middle;
+
+    margin-left: 8px;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+
+/* Hover effect */
+
+.solution-badge:hover {
+
+    transform: scale(1.08);
+
+    background-color: #388e3c;
+}
+
+
+/* ========================================================
+   DARK MODE BUTTON
+   SPECIAL FEATURE #5
+   ======================================================== */
+
+#dark-mode-toggle {
+
+    position: absolute;
+
+    top: 0;
+
+    right: 0;
+
+    padding: 8px 12px;
+
+    border: 1px solid #777;
+
+    border-radius: 5px;
+
+    background-color: white;
+
+    color: #333;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+#dark-mode-toggle:hover {
+
+    transform: scale(1.05);
+
+    background-color: #eeeeee;
+}
+
+
+/* ========================================================
+   STEP 3
+   FLOAT-BASED TWO COLUMN LAYOUT
+   ======================================================== */
+
+#main-content {
+
+    width: 100%;
+}
+
+
+/* Sidebar */
+
+#sidebar {
+
+    float: left;
+
+    width: 20%;
+
+    padding: 20px;
+
+    background-color: var(--sidebar-background);
+
+    min-height: 500px;
+
+    transition:
+        background-color 0.4s ease,
+        color 0.4s ease;
+}
+
+
+/* Sidebar heading */
+
+#sidebar h2 {
+
+    color: var(--heading-color);
+
+    margin-bottom: 12px;
+
+    font-size: 1.4em;
+}
+
+
+/* Sidebar list */
+
+#sidebar ul {
+
+    list-style-type: none;
+}
+
+
+/* Sidebar links */
+
+#sidebar li {
+
+    margin-bottom: 8px;
+}
+
+
+#sidebar a {
+
+    color: var(--link-color);
+
+    text-decoration: none;
+
+    font-weight: 500;
+
+    transition:
+        color 0.3s ease,
+        padding-left 0.3s ease;
+}
+
+
+/* ========================================================
+   SPECIAL FEATURE #2
+   HOVER EFFECT
+   ======================================================== */
+
+#sidebar a:hover {
+
+    color: #e74c3c;
+
+    padding-left: 5px;
+}
+
+
+/* Content area */
+
+#content-area {
+
+    float: left;
+
+    width: 80%;
+
+    padding: 20px;
+
+    background-color: var(--main-background);
+
+    transition:
+        background-color 0.4s ease;
+}
+
+
+/* ========================================================
+   STEP 4
+   CLEARFIX
+   ======================================================== */
+
+#main-content::after {
+
+    content: "";
+
+    display: table;
+
+    clear: both;
+}
+
+
+/* ========================================================
+   STEP 5
+   JOURNAL ENTRIES
+   ======================================================== */
+
+.journal-entry {
+
+    background-color: var(--entry-background);
+
+    margin-bottom: 20px;
+
+    padding: 15px;
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 5px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.4s ease;
+}
+
+
+/* ========================================================
+   SPECIAL FEATURE #2
+   ENTRY HOVER EFFECT
+   ======================================================== */
+
+.journal-entry:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Entry title */
+
+.entry-title {
+
+    color: var(--heading-color);
+
+    margin-bottom: 10px;
+
+    font-size: 1.25em;
+
+    transition: color 0.3s ease;
+}
+
+
+/* Entry paragraph */
+
+.journal-entry p {
+
+    margin-bottom: 10px;
+
+    color: var(--text-color);
+
+    transition: color 0.4s ease;
+}
+
+
+/* ========================================================
+   ENTRY IMAGE
+   ======================================================== */
+
+.entry-image {
+
+    float: right;
+
+    width: 190px;
+
+    max-width: 40%;
+
+    margin-left: 15px;
+
+    margin-bottom: 10px;
+
+    border: 12px solid white;
+
+    box-shadow: 0 0 0 2px #333;
+
+    padding: 8px;
+
+    background: white;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* ========================================================
+   SPECIAL FEATURE #2
+   IMAGE HOVER EFFECT
+   ======================================================== */
+
+.entry-image:hover {
+
+    transform: scale(1.03);
+
+    box-shadow:
+        0 0 0 2px #333,
+        0 5px 12px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ========================================================
+   FOOTER
+   ======================================================== */
+
+#footer {
+
+    clear: both;
+
+    padding: 20px;
+
+    text-align: center;
+
+    background-color: var(--main-background);
+
+    transition:
+        background-color 0.4s ease;
+}
+
+
+#footer hr {
+
+    border: 0;
+
+    border-top: 2px solid #dddddd;
+
+    margin-bottom: 20px;
+}
+
+
+/* ========================================================
+   ACTUAL W3C BADGES
+   ======================================================== */
+
+.validation-badges {
+
+    text-align: center;
+}
+
+
+.validation-badges a {
+
+    display: inline-block;
+
+    margin: 0 18px;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+/* Badge hover */
+
+.validation-badges a:hover {
+
+    transform: scale(1.05);
+
+    opacity: 0.85;
+}
+
+
+.validation-badges img {
+
+    border: 0;
+
+    vertical-align: middle;
+}
+
+
+/* ========================================================
+   SPECIAL FEATURE #3
+   EXTRA TABLET BREAKPOINT
+   ======================================================== */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    #main-container {
+
+        width: 95%;
+
+        margin: 15px auto;
+    }
+
+
+    #sidebar {
+
+        width: 25%;
+    }
+
+
+    #content-area {
+
+        width: 75%;
+    }
+
+
+    .entry-image {
+
+        width: 160px;
+    }
+}
+
+
+/* ========================================================
+   STEP 6
+   REQUIRED MOBILE RESPONSIVE DESIGN
+   ======================================================== */
+
+@media (max-width: 768px) {
+
+    #main-container {
+
+        width: 100%;
+
+        margin: 0;
+
+        border-left: 0;
+
+        border-right: 0;
+    }
+
+
+    #sidebar,
+    #content-area {
+
+        float: none;
+
+        width: 100%;
+    }
+
+
+    #sidebar {
+
+        min-height: auto;
+
+        margin-bottom: 20px;
+    }
+
+
+    #content-area {
+
+        padding: 15px;
+    }
+
+
+    .header-top {
+
+        padding-right: 0;
+
+    }
+
+
+    #dark-mode-toggle {
+
+        position: static;
+
+        display: block;
+
+        margin: 10px auto 0;
+    }
+
+
+    #header-box h1 {
+
+        font-size: 1.6em;
+    }
+
+
+    .entry-image {
+
+        float: none;
+
+        display: block;
+
+        width: 70%;
+
+        max-width: 100%;
+
+        margin: 15px auto;
+    }
+}
+
+
+/* ========================================================
+   SPECIAL FEATURE #5
+   DARK MODE
+   ======================================================== */
+
+body.dark-mode {
+
+    --page-background: #121212;
+
+    --main-background: #1e1e1e;
+
+    --header-background: #263f45;
+
+    --sidebar-background: #252525;
+
+    --entry-background: #293b3f;
+
+    --border-color: #4da7b3;
+
+    --heading-color: #70d6df;
+
+    --text-color: #eeeeee;
+
+    --muted-color: #bbbbbb;
+
+    --link-color: #8ee7ef;
+
+    background-color: var(--page-background);
+
+    color: var(--text-color);
+}
+
+
+/* Dark mode main container */
+
+body.dark-mode #main-container {
+
+    background-color: var(--main-background);
+
+    border-color: #4caf50;
+}
+
+
+/* Dark mode header */
+
+body.dark-mode #header-box {
+
+    background-color: var(--header-background);
+
+    color: #eeeeee;
+}
+
+
+body.dark-mode #header-box h1 {
+
+    color: #eeeeee;
+}
+
+
+body.dark-mode #header-box > p {
+
+    color: #c7dadd;
+}
+
+
+/* Dark mode button */
+
+body.dark-mode #dark-mode-toggle {
+
+    background-color: #333333;
+
+    color: white;
+
+    border-color: #777777;
+}
+
+
+/* Dark mode sidebar */
+
+body.dark-mode #sidebar {
+
+    background-color: var(--sidebar-background);
+
+    color: #eeeeee;
+}
+
+
+/* Dark mode links */
+
+body.dark-mode #sidebar a {
+
+    color: var(--link-color);
+}
+
+
+/* Dark mode content */
+
+body.dark-mode #content-area {
+
+    background-color: var(--main-background);
+}
+
+
+/* Dark mode journal entries */
+
+body.dark-mode .journal-entry {
+
+    background-color: var(--entry-background);
+
+    border-color: var(--border-color);
+}
+
+
+/* Dark mode titles */
+
+body.dark-mode .entry-title {
+
+    color: var(--heading-color);
+}
+
+
+/* Dark mode paragraphs */
+
+body.dark-mode .journal-entry p {
+
+    color: var(--text-color);
+}
+
+
+/* Dark mode images */
+
+body.dark-mode .entry-image {
+
+    background-color: #eeeeee;
+
+    border-color: #eeeeee;
+
+    box-shadow: 0 0 0 2px #111111;
+}
+
+
+/* Dark mode footer */
+
+body.dark-mode #footer {
+
+    background-color: var(--main-background);
+}
+
+
+body.dark-mode #footer hr {
+
+    border-top-color: #555555;
+}

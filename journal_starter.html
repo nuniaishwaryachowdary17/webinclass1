@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Henry's Gucci Journal</title>
+
+    <!--
+        SPECIAL FEATURES:
+
+        #1 Custom Color Theme & Typography
+        #2 Hover Effects & Transitions
+        #3 Extra Responsive Breakpoint
+        #5 Dark Mode Toggle
+    -->
+
+    <!-- Google Font: Special Feature #1 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="journal_starter.css">
+</head>
+
+
+<body>
+
+    <div id="main-container">
+
+
+        <!-- ==================================================
+             HEADER
+             ================================================== -->
+
+        <header id="header-box">
+
+            <div class="header-top">
+
+                <h1>
+                    Henry's Gucci Journal
+
+                    <span class="solution-badge">
+                        ✓ SOLUTION
+                    </span>
+                </h1>
+
+
+                <!-- DARK MODE TOGGLE
+                     Special Feature #5 -->
+
+                <button
+                    id="dark-mode-toggle"
+                    type="button"
+                    aria-label="Toggle dark mode"
+                >
+                    🌙 Dark Mode
+                </button>
+
+            </div>
+
+
+            <p>
+                So fresh and so clean
+            </p>
+
+        </header>
+
+
+
+        <!-- ==================================================
+             MAIN CONTENT
+             FLOAT-BASED TWO-COLUMN LAYOUT
+             ================================================== -->
+
+        <div id="main-content">
+
+
+            <!-- ==================================================
+                 SIDEBAR
+                 ================================================== -->
+
+            <aside id="sidebar">
+
+                <h2>Friends</h2>
+
+                <ul>
+
+                    <li>
+                        <a href="#">190m</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Buddies</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Big Will</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Conan the Librarian</a>
+                    </li>
+
+                </ul>
+
+            </aside>
+
+
+
+            <!-- ==================================================
+                 CONTENT AREA
+                 ================================================== -->
+
+            <main id="content-area">
+
+
+                <!-- ==================================================
+                     JOURNAL ENTRY 1
+                     ================================================== -->
+
+                <article class="journal-entry">
+
+                    <h2 class="entry-title">
+                        02/02/2026: The German Knife
+                    </h2>
+
+
+                    <img
+                        class="entry-image"
+                        src="knife.jpg"
+                        alt="German chef's knife"
+                    >
+
+
+                    <p>
+                        Yesterday I went to the store and got a premium
+                        German-made chef's knife! (What better way to say
+                        I love myself than to invest in quality cutlery?)
+                        The precision and craftsmanship of German knives
+                        are unmatched. Should I grab a whetstone to keep
+                        it sharp, or maybe a magnetic knife holder? What
+                        are you thinking!? Bruh hey Bruh, are you going
+                        to help me decide or what!?
+                    </p>
+
+                </article>
+
+
+
+                <!-- ==================================================
+                     JOURNAL ENTRY 2
+                     ================================================== -->
+
+                <article class="journal-entry">
+
+                    <h2 class="entry-title">
+                        02/02/2026: Cookie Monster Cupcakes
+                    </h2>
+
+
+                    <img
+                        class="entry-image"
+                        src="cupcake.jpg"
+                        alt="Chocolate cupcakes"
+                    >
+
+
+                    <p>
+                        My favourite cartoon character is Cookie Monster,
+                        and my favourite dessert is cupcakes, so Cookie
+                        Monster cupcakes are the best of both worlds.
+                    </p>
+
+
+                    <p>
+                        <strong>Did you know?</strong> Cookie Monster once
+                        said, "Sometimes me think what is love, and then me
+                        think love is what last cookie is for. Me give up
+                        the last cookie for you." I wonder if the same
+                        applies for cupcakes? (If so, I don't think I can
+                        ever love ANYONE!)
+                    </p>
+
+                </article>
+
+
+            </main>
+
+        </div>
+
+
+
+        <!-- ==================================================
+             FOOTER
+             ================================================== -->
+
+        <footer id="footer">
+
+            <hr>
+
+            <div class="validation-badges">
+
+                <!-- ACTUAL W3C XHTML BADGE -->
+
+                <a
+                    href="https://validator.w3.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img
+                        src="https://www.w3.org/Icons/valid-xhtml10"
+                        alt="Valid XHTML 1.0"
+                    >
+                </a>
+
+
+                <!-- ACTUAL W3C CSS BADGE -->
+
+                <a
+                    href="https://jigsaw.w3.org/css-validator/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img
+                        src="https://jigsaw.w3.org/css-validator/images/vcss"
+                        alt="Valid CSS"
+                    >
+                </a>
+
+            </div>
+
+        </footer>
+
+
+    </div>
+
+
+
+    <!-- ==================================================
+         DARK MODE JAVASCRIPT
+         SPECIAL FEATURE #5
+         ================================================== -->
+
+    <script>
+
+        const darkModeButton =
+            document.getElementById("dark-mode-toggle");
+
+
+        darkModeButton.addEventListener("click", function () {
+
+            document.body.classList.toggle("dark-mode");
+
+
+            if (document.body.classList.contains("dark-mode")) {
+
+                darkModeButton.textContent = "☀️ Light Mode";
+
+            } else {
+
+                darkModeButton.textContent = "🌙 Dark Mode";
+
+            }
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>
