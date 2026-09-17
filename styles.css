@@ -3,8 +3,6 @@ body {
     /* Sets the font to Arial, or any sans-serif if Arial is missing */
 
     background: radial-gradient(circle, white, lightgray);
-    /* Creates a background that starts white at the center
-       and fades to light gray at the edges */
 }
 
 h1 {
@@ -15,12 +13,7 @@ h1 {
     /* Adds 8 pixels of space inside the element around the text */
 
     text-shadow: 5px 5px 6px gray;
-    /* Adds a shadow to the text:
-       - 5px horizontal offset (right)
-       - 5px vertical offset (down)
-       - 6px blur radius (softness)
-       - gray color */
-}
+    
 
 p {
     color: white;
@@ -51,8 +44,7 @@ p:nth-child(5) {
     background: revert;
     box-shadow: revert;
     padding: revert;
-    /* 'revert' resets these properties to the browser's default,
-       effectively removing the custom styling for this specific line */
+
 }
 
 a {

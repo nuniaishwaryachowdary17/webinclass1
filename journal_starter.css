@@ -1,21 +1,4 @@
-/*
-==========================================================
-SPECIAL FEATURES
-==========================================================
 
-#1 Custom Color Theme & Typography
-#2 Hover Effects & Transitions
-#3 Extra Responsive Breakpoint
-#5 Dark Mode Toggle
-
-==========================================================
-*/
-
-
-/* ========================================================
-   SPECIAL FEATURE #1
-   CUSTOM COLORS + GOOGLE FONT
-   ======================================================== */
 
 :root {
 
@@ -251,14 +234,22 @@ body {
 }
 
 
+
 /* ========================================================
-   STEP 3
-   FLOAT-BASED TWO COLUMN LAYOUT
+   SPECIAL FEATURE #4
+   FLEXBOX REFACTOR
+   Replaces the float + clearfix layout above with Flexbox.
    ======================================================== */
 
 #main-content {
 
+    display: flex;
+
+    align-items: stretch;
+
     width: 100%;
+
+    transition: gap 0.4s ease;
 }
 
 
@@ -266,9 +257,7 @@ body {
 
 #sidebar {
 
-    float: left;
-
-    width: 20%;
+    flex: 0 0 20%;
 
     padding: 20px;
 
@@ -278,7 +267,8 @@ body {
 
     transition:
         background-color 0.4s ease,
-        color 0.4s ease;
+        color 0.4s ease,
+        flex-basis 0.4s ease;
 }
 
 
@@ -312,6 +302,8 @@ body {
 
 #sidebar a {
 
+    display: inline-block;
+
     color: var(--link-color);
 
     text-decoration: none;
@@ -319,8 +311,8 @@ body {
     font-weight: 500;
 
     transition:
-        color 0.3s ease,
-        padding-left 0.3s ease;
+        color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        padding-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -341,9 +333,7 @@ body {
 
 #content-area {
 
-    float: left;
-
-    width: 80%;
+    flex: 1 1 auto;
 
     padding: 20px;
 
@@ -351,21 +341,6 @@ body {
 
     transition:
         background-color 0.4s ease;
-}
-
-
-/* ========================================================
-   STEP 4
-   CLEARFIX
-   ======================================================== */
-
-#main-content::after {
-
-    content: "";
-
-    display: table;
-
-    clear: both;
 }
 
 
@@ -565,13 +540,7 @@ body {
 
     #sidebar {
 
-        width: 25%;
-    }
-
-
-    #content-area {
-
-        width: 75%;
+        flex-basis: 25%;
     }
 
 
@@ -601,12 +570,9 @@ body {
     }
 
 
-    #sidebar,
-    #content-area {
+    #main-content {
 
-        float: none;
-
-        width: 100%;
+        flex-direction: column;
     }
 
 
